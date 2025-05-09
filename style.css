@@ -42,10 +42,13 @@ body{
 
 .close {
     height: 10%;
-    width: 10%;
+    width: 16%;
     position: absolute;
     top: 0;
     right: 0;
+    
+    border-radius: 5px;
+    border: none;
 }
 
 .Display {
@@ -53,7 +56,8 @@ body{
     width: 100%;
 
     background-color: rgb(41, 41, 41);
-    border: 0;
+    border: none;
+    border-radius: 5px;
 }
 
 .buttons {
@@ -64,6 +68,8 @@ body{
     grid-template-rows: repeat(5, 1fr);
 
     gap: 1.6px;
+
+    background-color: rgb(41, 41, 41);
 }
 
 .buttons button{
@@ -73,4 +79,9 @@ body{
 
 .buttons .equal{
     grid-column: span 2;
+}
+
+button {
+    background-color: rgb(41, 41, 41);
+    color: azure;
 }
