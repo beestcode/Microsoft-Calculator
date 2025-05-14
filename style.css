@@ -128,6 +128,10 @@ body{
     background-color: var(--buttons);
 }
 
+.buttons button:hover{
+    background-color: var(--operators);
+}
+
 .buttons #equal{
     text-align: center;
 
@@ -138,7 +142,9 @@ body{
 
     background-color: var(--equal);
     color: black;
-
+}
+.buttons #equal:hover{
+    opacity: .9;
 }
 
 .buttons #div, #mul, #sub, #add{
@@ -154,5 +160,10 @@ body{
     background-color: var(--operators);
 }
 #del {
-    font-size: .7rem;
+    font-size: .8rem;
 }
+
+.buttons #ce:hover, #c:hover, #del:hover, #div:hover, #mul:hover, #sub:hover, #add:hover{
+    background-color: var(--buttons);
+}
+
