@@ -1,3 +1,19 @@
+@font-face {
+    font-family: 'symbols';
+    src: url(./Segoe\ Fluent\ Icons.ttf);
+}
+
+:root {
+    --calculator: rgb(43, 37, 31);
+    --buttons: rgb(66, 62, 58);
+    --operators: rgb(57, 53, 49);
+    --text: azure;
+    --close: rgb(180, 0, 0);
+    --equal: rgb(229, 205, 183);
+}
+
+
+
 *{
     padding: 0;
     margin: 0;
@@ -35,7 +51,7 @@ body{
     align-items: center;
     text-align: center;
 
-    background-color: rgb(41, 41, 41);
+    background-color: var(--calculator);
 
     border-radius: .5rem;
     border: none;
@@ -50,14 +66,23 @@ body{
     position: absolute;
     top: 0;
     right: 0;
+
+    font-size: 1.55rem;
+    /* font-weight: lighter; */
+    font-family:  'times new roman';
     
     border-top-right-radius: .5rem;
     border: none;
 
     background-color: inherit;
+    color: rgb(255, 255, 255);
+    opacity: 0.3;
+    cursor: pointer;
 }
 .close:hover {
-    background-color: rgb(255, 0, 0);
+    background-color: var(--close);
+    /* color: rgb(255, 255, 255); */
+    opacity: 1;
 }
 
 .Display {
@@ -80,42 +105,54 @@ body{
     grid-template-rows: repeat(5, 1fr);
 
     
-    gap: .1875rem;
-    padding: .3125rem;
+    gap: .1810rem;
+    padding: .2500rem;
 
-    background-color: rgb(41, 41, 41);
+    background-color: var(--calculator);
 
     border-radius: .4375rem;
 }
 
 .buttons button{
     font-size: 1.125rem;
-    /* font-weight: 100; */
+    font-weight: normal;
+
     color: azure;
+
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     text-align: center;
     border: none;
     border-radius: .25rem;
 
-    background-color: rgb(61, 61, 61);
+    background-color: var(--buttons);
 }
 
-.buttons .equal{
+.buttons #equal{
+    text-align: center;
+
     grid-column: span 2;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'times new roman';
+    font-weight: normal;
+    font-size: 1.8rem;
 
+    background-color: var(--equal);
+    color: black;
+
+}
+
+.buttons #div, #mul, #sub, #add{
+    font-family: 'symbols';
     font-size: 1.5rem;
+    font-weight: lighter;
+    background-color: var(--operators);
 }
 
-button {
-    background-color: rgb(41, 41, 41);
-    color: azure;
-}
-
-#symbols{
-    background-color: rgb(54, 54, 54);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+.buttons #ce, #c, #del{
+    font-family: 'segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: .9rem;
+    background-color: var(--operators);
+}
+#del {
+    font-size: .7rem;
 }
