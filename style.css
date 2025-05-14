@@ -4,12 +4,12 @@
 }
 
 :root {
-    --calculator: rgb(43, 37, 31);
-    --buttons: rgb(66, 62, 58);
-    --operators: rgb(57, 53, 49);
+    --calculator: rgb(31, 31, 31);
+    --buttons: rgb(57, 57, 57);
+    --operators: rgb(47, 47, 47);
     --text: azure;
     --close: rgb(180, 0, 0);
-    --equal: rgb(229, 205, 183);
+    --equal: rgb(215, 215, 215);
 }
 
 
@@ -42,7 +42,7 @@ body{
 
 
 .Calculator{
-    height: 24rem;
+    height: 23.88rem;
     width: 20rem;
     
     display: flex;
@@ -88,6 +88,9 @@ body{
 .Display {
     height: 6.625rem; 
     width: 20rem;
+    
+    padding: 2.5rem .7rem 0rem;
+    /* padding-top: 2rem; */
 
     background-color: inherit;
     color: azure;
@@ -95,6 +98,11 @@ body{
     border: none;
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
+
+    text-align: right;
+    font-size: 2.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
 }
 
 .buttons {
