@@ -9,28 +9,29 @@
 <body>
     <div class="Calculator">
         <button class="close">×</button>
-        <input class="Display" type="text" display>
+        <input id="Display" type="text" disabled>
         <div class="buttons">
-            <button id="ce" >CE</button>
-            <button id="c" >C</button>
-            <button id="del" >⌫</button>
-            <button id="div" >÷</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button id="mul" >×</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button id="sub" >-</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button id="add" >+</button>
-            <button id="dec" >.</button>
-            <button>0</button>
+            <button id="ce" onclick="clearentry()">CE</button>
+            <button id="c" onclick="clearall()">C</button>
+            <button id="del" onclick="remove()">⌫</button>
+            <button id="div" onclick="writevalue('÷')">÷</button>
+            <button onclick="writevalue(7)">7</button>
+            <button onclick="writevalue(8)">8</button>
+            <button onclick="writevalue(9)">9</button>
+            <button id="mul" onclick="writevalue('×')">×</button>
+            <button onclick="writevalue(4)">4</button>
+            <button onclick="writevalue(5)">5</button>
+            <button onclick="writevalue(6)">6</button>
+            <button id="sub" onclick="writevalue('-')">-</button>
+            <button onclick="writevalue(1)">1</button>
+            <button onclick="writevalue(2)">2</button>
+            <button onclick="writevalue(3)">3</button>
+            <button id="add" onclick="writevalue('+')">+</button>
+            <button id="dec" onclick="writevalue('.')">.</button>
+            <button onclick="writevalue(0)">0</button>
             <button id="equal">=</button>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
