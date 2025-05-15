@@ -9,7 +9,7 @@
     --operators: rgb(47, 47, 47);
     --text: azure;
     --close: rgb(180, 0, 0);
-    --equal: rgb(215, 215, 215);
+    --equal: rgb(217, 209, 193);
 }
 
 
@@ -26,7 +26,7 @@ html{
 
     font-size: 16px;
     
-    background-color: rgb(248, 219, 181);
+    background-color: rgb(236, 224, 201);
 }
 
 body{
@@ -35,9 +35,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: end;
-
-    padding: .5rem;
+    align-items: center;
 }
 
 
@@ -78,6 +76,7 @@ body{
     color: rgb(255, 255, 255);
     opacity: 0.3;
     cursor: pointer;
+    transition: all .1s ease-in-out;
 }
 .close:hover {
     background-color: var(--close);
@@ -85,12 +84,12 @@ body{
     opacity: 1;
 }
 
-.Display {
+#Display {
     height: 6.625rem; 
     width: 20rem;
     
-    padding: 2.5rem .7rem 0rem;
-    /* padding-top: 2rem; */
+    padding: 2.5rem .9rem 0rem;
+    
 
     background-color: inherit;
     color: azure;
