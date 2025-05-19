@@ -8,6 +8,9 @@ function writevalue(value) {
     let display = document.getElementById('Display');
     let operators = ['+', '-', '*', '/'];
 
+    if ( display.value === '0' && operators.includes(value)){
+        return;
+    }
     if (display.value === '0' ? (display.value = value) : (display.value += value)){
         return;
     }
