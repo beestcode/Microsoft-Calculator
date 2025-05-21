@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function writevalue(value) {
     value = value === '×' ? '*' : value === '÷' ? '/' : value;
     let display = document.getElementById('Display');
+    
     let operators = ['+', '-', '*', '/'];
 
     if ( display.value === '0' && operators.includes(value)){
@@ -16,5 +17,6 @@ function writevalue(value) {
     }
     
     
+
  
 }
