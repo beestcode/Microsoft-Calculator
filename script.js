@@ -12,13 +12,18 @@ function writevalue(value) {
     if ( display.value === '0' && operators.includes(value)){
         return;
     }
+    if (operators.includes(last) && operators.includes(value)) {
+         return;
+    }
+
     if ( value === '.' && last === '.') {
         return;
     }
-    if (display.value === '0' ? (display.value = value) : (display.value += value)){
-        return;
-    }
-    
 
- 
+    if (display.value === '0' ? (display.value = value) : (display.value += value)) return;
+}
+
+function remove() {
+    let display = document.getElementById('Display')
+    display.value = display.value.slice(0, -1)
 }
