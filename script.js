@@ -23,7 +23,11 @@ function writevalue(value) {
     if (display.value === '0' ? (display.value = value) : (display.value += value)) return;
 }
 
+function remove() {
+    let display = document.getElementById('Display')
 
+    if (display.value.length > 1 ? display.value = display.value.slice(0, -1) : display.value = '0');
+}
 
 function clearall() {
     document.getElementById('Display').value = '0'
