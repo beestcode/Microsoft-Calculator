@@ -34,3 +34,7 @@ function clearall() {
     document.getElementById('Display').value = '0'
 }
 
+function clearentry() {
+    let display = document.getElementById('Display')
+    display.value = display.value.replace(/[\d.]+$/, "") || '0';
+}
