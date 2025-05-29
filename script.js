@@ -19,6 +19,7 @@ function writevalue(value) {
     if ( value === '.' && last === '.') {
         return;
     }
+    if (value === '.' && display.value.split(/[\+\-\*\/]/).pop().includes('.')) return;
 
     if (display.value === '0' ? (display.value = value) : (display.value += value)) return;
 }
@@ -32,3 +33,4 @@ function remove() {
 function clearall() {
     document.getElementById('Display').value = '0'
 }
+
