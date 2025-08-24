@@ -62,8 +62,10 @@ function calculate() {
     if (display.value === '.') return;
     if (display.value.trim() === '') return;
 
+    display.value = display.value.replace(/,/g, "")
+
     try {
-        display.value = Function("return " + display.value)();
+        display.value = formatnumber(Function("return " + display.value)());
         // display.style.color = ''; // Reset to default color
     }
     catch (e) {
