@@ -28,8 +28,12 @@ function writevalue(value) {
         return;
     }
     if (value === '.' && display.value.split(/[\+\-\*\/]/).pop().includes('.')) return;
+   
+    //remove commas for calculation
+    let rawvalue = display.value.replace(/,/g, '');
 
-    if (display.value === '0' ? (display.value = value) : (display.value += value)) return;
+    // type the first number if display is 0 or format the number with commas
+    if (display.value === '0' ? (display.value = value) : (display.value = formatnumber(rawvalue + value))) return;
 }
 
 function remove() {
@@ -68,4 +72,6 @@ function calculate() {
     }
 }
 
-
+function formatnumber(num) {
+    return num.tostring().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+}
