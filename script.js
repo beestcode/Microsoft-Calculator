@@ -55,6 +55,7 @@ function clearentry() {
 
 function calculate() {
     let display = document.getElementById('Display');
+    if (display.value === '.') return;
     if (display.value.trim() === '') return;
 
     try {
